@@ -7,17 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registrar-producto.page.scss'],
   standalone: false
 })
-export class RegistrarProductoPage implements OnInit {
 
+
+export class RegistrarProductoPage {
   productos: any[] = [];
 
   agregarProducto(producto: any) {
     this.productos.push(producto);
   }
 
-  constructor() { }
-
-  ngOnInit() {
+  eliminarProducto(index: number) {
+    this.productos.splice(index, 1);
   }
-
 }

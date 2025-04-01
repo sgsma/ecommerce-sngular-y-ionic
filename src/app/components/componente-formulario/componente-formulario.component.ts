@@ -12,8 +12,7 @@ import { IonicModule } from '@ionic/angular';
 })
 
 
-export class ComponenteFormularioComponent  implements OnInit {
-
+export class ComponenteFormularioComponent {
   nombre = '';
   precio = 0;
   precioAntes = 0;
@@ -33,16 +32,10 @@ export class ComponenteFormularioComponent  implements OnInit {
     };
     this.productoAgregado.emit(producto);
 
-    // Reset
     this.nombre = '';
     this.precio = 0;
     this.precioAntes = 0;
     this.descuento = '';
     this.imagen = '';
   }
-
-  constructor() { }
-
-  ngOnInit() {}
-
 }

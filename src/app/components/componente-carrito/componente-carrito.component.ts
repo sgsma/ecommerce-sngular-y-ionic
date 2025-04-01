@@ -27,9 +27,9 @@ export class ComponenteCarritoComponent implements OnInit {
   @Input() colorBoton: string = 'tertiary';
   @Input() titulo: string = 'PRODUCTOS RECOMENDADOS'
   @Input() mostrarBotonCompra: boolean = false;
-  @Input() listaProductos: any[] = [];
-
   @Output() messageEvent = new EventEmitter<string>
+  @Output() eliminarProducto = new EventEmitter<number>();
+  @Input() listaProductos: any[] = [];
 
   
 
@@ -128,3 +128,4 @@ export class ComponenteCarritoComponent implements OnInit {
 
   ngOnInit() {}
 }
+

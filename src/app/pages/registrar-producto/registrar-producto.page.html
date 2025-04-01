@@ -5,14 +5,14 @@
       <app-componente-formulario (productoAgregado)="agregarProducto($event)"></app-componente-formulario>
     </ion-col>
 
-    <!-- Columna derecha: productos -->
+    <!-- Columna derecha: lista dinámica de productos -->
     <ion-col size="12" sizeMd="6">
       <app-componente-carrito
-      [mostrarBotonCompra]="false"
-      [titulo]="'Lista de productos'"
-      [listaProductos]="productos">
+        [mostrarBotonCompra]="false"
+        [titulo]="'Lista de productos'"
+        [listaProductos]="productos"
+        (eliminarProducto)="eliminarProducto($event)">
       </app-componente-carrito>
-    
     </ion-col>
   </ion-row>
 </ion-grid>

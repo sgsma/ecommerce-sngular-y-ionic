@@ -1,7 +1,7 @@
-<ion-list *ngIf="mostrar; else sinProductos">
-  <ion-label [class]="titulo">{{titulo}}</ion-label>
+<ion-list *ngIf="listaProductos.length > 0; else sinProductos">
+  <ion-label class="titulo">{{titulo}}</ion-label>
 
-  <ion-item lines="none" *ngFor="let producto of productos" class="card-producto">
+  <ion-item lines="none" *ngFor="let producto of listaProductos; let i = index" class="card-producto">
     <img [src]="producto.imagen" class="imagen-producto" />
 
     <ion-grid class="info-producto">
@@ -17,10 +17,6 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-    
-    <ion-button *ngIf="this.mostrarBotonCompra" (click)="emitirMensaje()">Comprar</ion-button>
-    <ion-button *ngIf="!this.mostrarBotonCompra" (click)="evento2()">Eliminar</ion-button>
-
 
   </ion-item>
 </ion-list>
