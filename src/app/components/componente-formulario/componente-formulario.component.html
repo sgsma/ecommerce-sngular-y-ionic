@@ -1,0 +1,14 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Formulario de Registro</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item><ion-input [(ngModel)]="nombre" placeholder="Nombre del producto"></ion-input></ion-item>
+    <ion-item><ion-input type="number" [(ngModel)]="precio" placeholder="Precio actual"></ion-input></ion-item>
+    <ion-item><ion-input type="number" [(ngModel)]="precioAntes" placeholder="Precio anterior"></ion-input></ion-item>
+    <ion-item><ion-input [(ngModel)]="descuento" placeholder="Descuento"></ion-input></ion-item>
+    <ion-item><ion-input [(ngModel)]="imagen" placeholder="URL de imagen"></ion-input></ion-item>
+
+    <ion-button expand="block" color="danger" (click)="guardarProducto()">GUARDAR</ion-button>
+  </ion-card-content>
+</ion-card>

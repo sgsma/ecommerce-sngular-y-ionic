@@ -1,0 +1,18 @@
+<ion-grid>
+  <ion-row>
+    <!-- Columna izquierda: formulario -->
+    <ion-col size="12" sizeMd="6">
+      <app-componente-formulario (productoAgregado)="agregarProducto($event)"></app-componente-formulario>
+    </ion-col>
+
+    <!-- Columna derecha: productos -->
+    <ion-col size="12" sizeMd="6">
+      <app-componente-carrito
+      [mostrarBotonCompra]="false"
+      [titulo]="'Lista de productos'"
+      [listaProductos]="productos">
+      </app-componente-carrito>
+    
+    </ion-col>
+  </ion-row>
+</ion-grid>

@@ -1,0 +1,35 @@
+.contenedor-principal {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .columna-izquierda {
+    flex: 1;
+    min-width: 300px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+  }
+  
+  .columna-derecha {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    height: 100%; 
+  }
+  
+  .datos-comprador {
+    padding: 10px;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+  }
+  
+  .espacio-vacio {
+    flex: 1;
+    padding: 10px;
+  }
+  

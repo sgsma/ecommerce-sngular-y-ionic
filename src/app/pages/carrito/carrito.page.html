@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>carrito</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="contenedor-principal">
+    
+    <div class="columna-izquierda">
+
+      <app-componente-carrito 
+      [mostrarBotonCompra]="mostrarBoton"
+
+      ></app-componente-carrito>
+
+    </div>
+
+    <div class="columna-derecha">
+      
+      <div class="datos-comprador">
+        <h2>DATOS DEL COMPRADOR</h2>
+        <p>Nombre: ________________________</p>
+        <p>Dirección: ______________________</p>
+        <p>Teléfono: _______________________</p>
+        <p>Correo: _________________________</p>
+      </div>
+
+      <div class="espacio-vacio">
+        <!-- Espacio reservado -->
+      </div>
+
+    </div>
+    
+  </div>
+</ion-content>

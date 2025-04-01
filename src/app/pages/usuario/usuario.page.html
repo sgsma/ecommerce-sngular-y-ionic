@@ -1,0 +1,51 @@
+<ion-content class="ion-padding">
+  <div class="perfil-container">
+
+    <div class="perfil-header">
+      <p>Información de usuario</p>
+    </div>
+
+    <div class="foto-container">
+      <img [src]="usuario.foto" alt="Foto de perfil" />
+      <h2>{{ usuario.nombre }}</h2>
+      <p class="perfil">{{ usuario.perfil }}</p>
+    </div>
+
+    <div class="estadisticas">
+      <div>
+        <p class="cantidad">{{ usuario.compras }}</p>
+        <p class="label">Compras</p>
+      </div>
+      <div>
+        <p class="cantidad">{{ usuario.reputacion }}</p>
+        <p class="label">Reputación</p>
+      </div>
+      <div>
+        <p class="cantidad">{{ usuario.antiguedad }}</p>
+        <p class="label">Antigüedad</p>
+      </div>
+    </div>
+
+    <div class="info-seccion">
+      <p class="label">Email</p>
+      <p>{{ usuario.email }}</p>
+
+      <p class="label">Teléfono</p>
+      <p>{{ usuario.telefono }}</p>
+
+      <p class="label">Ciudad</p>
+      <p>{{ usuario.ciudad }}</p>
+
+      <p class="label">Intereses</p>
+      <ul>
+        <li *ngFor="let interes of usuario.intereses">{{ interes }}</li>
+      </ul>
+    </div>
+
+    <div class="botones-inferiores">
+      <ion-button class="btnAccion" size="small" fill="outline">Contactar</ion-button>
+      <ion-button class="btnAccion" size="small" fill="outline">Reportar</ion-button>
+    </div>    
+
+  </div>
+</ion-content>
