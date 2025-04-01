@@ -6,7 +6,7 @@ import { IonicModule } from '@ionic/angular';
 @Component({
   selector: 'app-componente-carrito',
   standalone: true,
-  imports: [CommonModule, IonicModule],  //Al usar standalone true necesito decirle directamente que módulos auxiliares encesita
+  imports: [CommonModule, IonicModule],  // Al usar standalone true necesito decirle directamente que módulos auxiliares encesita
   templateUrl: './componente-carrito.component.html',
   styleUrls: ['./componente-carrito.component.scss']
 })

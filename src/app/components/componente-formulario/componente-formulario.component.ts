@@ -14,8 +14,8 @@ import { IonicModule } from '@ionic/angular';
 
 export class ComponenteFormularioComponent {
   nombre = '';
-  precio = 0;
-  precioAntes = 0;
+  precio = '';
+  precioAntes = '';
   descuento = '';
   imagen = '';
 
@@ -33,8 +33,8 @@ export class ComponenteFormularioComponent {
     this.productoAgregado.emit(producto);
 
     this.nombre = '';
-    this.precio = 0;
-    this.precioAntes = 0;
+    this.precio = '';
+    this.precioAntes = '';
     this.descuento = '';
     this.imagen = '';
   }
