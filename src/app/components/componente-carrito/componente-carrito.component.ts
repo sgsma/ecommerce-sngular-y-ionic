@@ -28,7 +28,6 @@ export class ComponenteCarritoComponent implements OnInit {
   @Input() titulo: string = 'PRODUCTOS RECOMENDADOS'
   @Input() mostrarBotonCompra: boolean = false;
   @Output() messageEvent = new EventEmitter<string>
-  @Output() eliminarProducto = new EventEmitter<number>();
   @Input() listaProductos: any[] = [];
 
   

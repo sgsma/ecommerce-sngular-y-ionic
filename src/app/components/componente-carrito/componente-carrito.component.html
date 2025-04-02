@@ -1,7 +1,7 @@
-<ion-list *ngIf="listaProductos.length > 0; else sinProductos">
+<ion-list *ngIf="listaProductos; else sinProductos">
   <ion-label class="titulo">{{titulo}}</ion-label>
 
-  <ion-item lines="none" *ngFor="let producto of listaProductos; let i = index" class="card-producto">
+  <ion-item lines="none" *ngFor="let producto of listaProductos" class="card-producto">
     <img [src]="producto.imagen" class="imagen-producto" />
 
     <ion-grid class="info-producto">

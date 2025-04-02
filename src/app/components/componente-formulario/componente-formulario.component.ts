@@ -19,17 +19,17 @@ export class ComponenteFormularioComponent {
   descuento = '';
   imagen = '';
 
-  @Output() productoAgregado = new EventEmitter<any>();
+  @Output() productoAgregado = new EventEmitter<any>(); // Evento personalizado
 
   guardarProducto() {
     const producto = {
-      id: Date.now(),
       nombre: this.nombre,
       precio: this.precio,
       precioAntes: this.precioAntes,
       descuento: this.descuento,
       imagen: this.imagen
     };
+
     this.productoAgregado.emit(producto);
 
     this.nombre = '';

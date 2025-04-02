@@ -16,7 +16,4 @@ export class RegistrarProductoPage {
     this.productos.push(producto);
   }
 
-  eliminarProducto(index: number) {
-    this.productos.splice(index, 1);
-  }
 }
