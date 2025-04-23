@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component } from '@angular/core';
+import { ListarProductosService } from 'src/app/data/services/listar-productos.service';
 
 @Component({
   selector: 'app-registrar-producto',
@@ -7,13 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registrar-producto.page.scss'],
   standalone: false
 })
-
-
 export class RegistrarProductoPage {
-  productos: any[] = [];
+
+  constructor(private productosService: ListarProductosService) {}
 
   agregarProducto(producto: any) {
-    this.productos.push(producto);
+    this.productosService.agregarProducto(producto);
   }
 
 }

@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ListarProductosService } from 'src/app/data/services/listar-productos.service';
 
 @Component({
   selector: 'app-producto',
@@ -8,13 +9,16 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ProductoPage implements OnInit {
 
-  @Input() mostrarBoton: boolean = true;
-  
-  recibirMensaje(mensaje: string){
-    console.log("El mensaje de mi hijo es: " + mensaje)
+  productos: any[] = [];
+
+  constructor(private productosService: ListarProductosService) {}
+
+  ngOnInit() {
+    this.productos = this.productosService.obtenerProductos();
   }
 
-  constructor() {}
+  recibirMensaje(mensaje: string) {
+    console.log("El mensaje de mi hijo es: " + mensaje);
+  }
 
-  ngOnInit() {}1
 }
