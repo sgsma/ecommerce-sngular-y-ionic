@@ -12,7 +12,7 @@ export class RegistrarProductoPage {
   constructor(private productosService: ListarProductosService) {}
 
   agregarProducto(producto: any) {
-    this.productosService.agregarProducto(producto);
+    this.productosService.agregarProductoManual(producto);
   }
 
 }

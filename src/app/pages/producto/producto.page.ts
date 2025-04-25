@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ListarProductosService } from 'src/app/data/services/listar-productos.service';
+import { Producto } from 'src/app/data/interfaces/producto';
+
 
 @Component({
   selector: 'app-producto',
@@ -9,16 +11,15 @@ import { ListarProductosService } from 'src/app/data/services/listar-productos.s
 })
 export class ProductoPage implements OnInit {
 
-  productos: any[] = [];
+  productos: Producto[] = [];
 
   constructor(private productosService: ListarProductosService) {}
 
-  ngOnInit() {
-    this.productos = this.productosService.obtenerProductos();
+  async ngOnInit() {
+    this.productos = await this.productosService.obtenerProductos();
   }
 
-  recibirMensaje(mensaje: string) {
-    console.log("El mensaje de mi hijo es: " + mensaje);
+  comprarProducto(producto: Producto) {
+    this.productosService.comprarProducto(producto);
   }
-
 }

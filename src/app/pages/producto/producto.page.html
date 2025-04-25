@@ -1,4 +1,7 @@
-<app-componente-carrito
-  [listaProductos]="productos"
-  (messageEvent)="recibirMensaje($event)">
-</app-componente-carrito>
+<ion-content>
+  <app-componente-carrito
+    [listaProductos]="productos"
+    [modo]="'producto'"
+    (productoAccionado)="comprarProducto($event)">
+  </app-componente-carrito>
+</ion-content>
